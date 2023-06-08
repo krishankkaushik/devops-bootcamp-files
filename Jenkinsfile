@@ -6,7 +6,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building the application'
-        #stage("init") {
+        //stage("init") {
          //   steps {
           //      script {
            //         gv = load "script.groovy"
