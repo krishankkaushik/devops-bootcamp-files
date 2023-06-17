@@ -54,7 +54,7 @@ pipeline {
                 script {
                     def dockerCmd = 'docker run -p 8083:8080 krishank06/nginx-image:latest'
                     sshagent(['624a0a80-5d8b-4717-9881-0c52d005378a']) {
-                    sh "ssh -o StrictHostKeyChecking=no ec2-user@3.110.136.161 ${dockeCmd}"
+                    sh "ssh -o StrictHostKeyChecking=no ec2-user@3.110.136.161 ${dockerCmd}"
                     }
                     
                     echo "Deploying the application..."
