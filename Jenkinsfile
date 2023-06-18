@@ -52,7 +52,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    def dockerCmd = 'docker run -p 8083:80 krishank06/nginx-image:latest'
+                    def dockerCmd = 'docker run -p 8083:80 krishank06/my-nginx-image:latest'
                     sshagent(['624a0a80-5d8b-4717-9881-0c52d005378a']) {
                         sh "ssh -o StrictHostKeyChecking=no ec2-user@3.110.136.161 ${dockerCmd}"
                     } 
